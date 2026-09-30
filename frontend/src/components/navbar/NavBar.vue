@@ -18,15 +18,15 @@ import HomepageIcon from "@/components/navbar/icons/HomepageIcon.vue";
           </label>
           <div class="px-2 font-bold">Navbar Title</div>
         </div>
-        <div class="navbar-center w-4/5 max-w-180">
-          <div class="join w-4/5">
+        <div class="navbar-center w-4/5 max-w-180 felx justify-center">
+          <div class="join w-4/5 flex justify-center">
             <input class="input join-item rounded-l-full w-4/5" placeholder="搜索内容" />
             <button class="btn join-item rounded-r-full">搜索</button>
           </div>
         </div>
 
         <div class="navbar-end">
-          <button class="btn btn-ghost text-lg">登录</button>
+          <RouterLink :to="{name: 'login-index'}" class="btn btn-ghost text-lg">登录</RouterLink>
         </div>
 
       </nav>
@@ -41,29 +41,29 @@ import HomepageIcon from "@/components/navbar/icons/HomepageIcon.vue";
         <ul class="menu w-full grow">
           <!-- List item -->
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
+            <RouterLink :to="{name: 'homepage-index'}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
               <!-- Home icon -->
               <HomepageIcon/>
               <span class="is-drawer-close:hidden">首页</span>
-            </button>
+            </RouterLink>
           </li>
 
           <!-- List item -->
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
+            <RouterLink :to="{name: 'friend-index'}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
               <!-- Settings icon -->
               <FriendIcon/>
               <span class="is-drawer-close:hidden">好友</span>
-            </button>
+            </RouterLink>
           </li>
 
           <!-- List item -->
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
+            <RouterLink :to="{name: 'create-index'}" class="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
               <!-- Settings icon -->
               <CreateIcon/>
               <span class="is-drawer-close:hidden">创作</span>
-            </button>
+            </RouterLink>
           </li>
         </ul>
       </div>
